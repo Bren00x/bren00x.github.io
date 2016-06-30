@@ -1,0 +1,58 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin:0;
+  background: url(https://vignette1.wikia.nocookie.net/trollpasta/images/f/fc/Keemstar.jpg/revision/latest?cb=20160620122241) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  
+}
+a {color: black; text-decoration: none;}
+div.nav {
+  width: 100%;background-color: white;
+z-index: 2;
+color: black;
+height: 48px;}
+
+
+
+div.logo {
+
+  padding-top: 5px;
+  position: absolute;
+  color: black;
+font-size: 25px;
+top: 5px;
+  left: 5px;z-index: 2;}
+div.tab {top: 17px;
+  left: 165px;
+  z-index: 2;
+  position: absolute;
+}
+
+div.album { position: relative;
+  background-color: white;
+  width: 300px;
+  height: 350px;
+  margin: auto;
+top: 50px;
+  border-radius: 10px;
+}
+img {width: 100%;border-top-right-radius: 10px;border-top-left-radius: 10px;}
+div.title {padding-top: 10px;
+padding-left: 5px;
+font-size: 20px;}
+div.hidden {
+  width:20px ;
+  height: 20px;
+  background-image: url('https://lh3.googleusercontent.com/-OS8ScmbEsDk/AAAAAAAAAAI/AAAAAAAAAEM/JAZYBLjyjQs/s120-c/photo.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+
+}
+
