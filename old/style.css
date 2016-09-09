@@ -1,0 +1,27 @@
+body {
+    font-family:Courier;
+    color: #CCCCCC;
+    background-color: black;
+    
+}
+
+
+
+#consoleconnect{
+    width: 10px;
+    height: 20px;
+    background-color: #CCCCCC;
+}
+
+.green {color: green;}
+.blue {color: deepskyblue;}
+.yello {color: yellow;}
+
+input.input {background-color: transparent;
+font-family:Courier;
+    color: #CCCCCC;
+border-width: 0px;
+border-bottom-width: 1px;}
+
+
+a {color:#CCCCCC;}
