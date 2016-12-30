@@ -1,0 +1,16 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  overflow: hidden;
+}
+video{
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
