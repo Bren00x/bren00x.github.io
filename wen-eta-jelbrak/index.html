@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>wen eta jelbrak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <div class='a'>wen eta jelbrak</div>
+    <div class='b'>wen eta jelbrak</div>
+    <div class='c'>wen eta jelbrak</div>
+    <div class='d'>wen eta jelbrak</div>
+    <div class='e'>wen eta jelbrak</div>
+    <div class='f'>wen eta jelbrak</div>
+  </div>
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      animateDiv($('.a'));
+      animateDiv($('.b'));
+      animateDiv($('.c'));
+      animateDiv($('.d'));
+      animateDiv($('.e'));
+      animateDiv($('.f'));
+
+
+    });
+
+    function makeNewPosition($container) {
+
+      // Get viewport dimensions (remove the dimension of the div)
+      var h = $container.height() - 50;
+      var w = $container.width() - 50;
+
+      var nh = Math.floor(Math.random() * h);
+      var nw = Math.floor(Math.random() * w);
+
+      return [nh, nw];
+
+    }
+
+    function animateDiv($target) {
+      var newq = makeNewPosition($target.parent());
+      var oldq = $target.offset();
+      var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+      $target.animate({
+        top: newq[0],
+        left: newq[1]
+      }, speed, function() {
+        animateDiv($target);
+      });
+
+    };
+
+    function calcSpeed(prev, next) {
+
+      var x = Math.abs(prev[1] - next[1]);
+      var y = Math.abs(prev[0] - next[0]);
+
+      var greatest = x > y ? x : y;
+
+      var speedModifier = .05;
+
+      var speed = Math.ceil(greatest / speedModifier);
+
+      return speed;
+
+    }
+  </script>
+</body>
+</html>
