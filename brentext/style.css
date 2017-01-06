@@ -1,0 +1,84 @@
+*{
+  font-size: 13px;
+  outline: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  font-family: monospace;
+  background-color: black;
+  margin: 0px;
+  
+}
+
+a{
+  text-decoration: none;
+  color: black
+}
+
+.na-title{
+  background-color: ;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  padding: 1px;
+}
+
+
+.doc-title{
+  background-color: ;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  padding: 1px;
+}
+.doc-nav{
+  background-color: ;
+  text-align: ;
+  width: 100%;
+  background-color: white;
+  padding: 1px;
+  position: absolute;
+  bottom: 0px;
+}
+
+input{
+  font-family: monospace;
+  color: black;
+  border: 0px;
+  text-align: center;
+}
+
+
+input::-webkit-input-placeholder {
+  color: black !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+  color: black !important;  
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+  color: black !important;  
+}
+
+input:-ms-input-placeholder {  
+  color: black;
+}
+
+
+
+textarea {
+  resize: none;
+  border: 0px;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  position: absolute;
+  top: 36px;
+  left: 0px;
+  right: 0px;
+  bottom: 47px;
+  padding: 0px;
+  font-family: monospace;
+}
