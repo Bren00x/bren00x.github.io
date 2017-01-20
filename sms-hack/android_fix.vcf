@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+PRODID:-//BBros.us llc//bvCard.com//EN
+N:doe;john;;;
+FN:john doe
+ORG:Preston159
+URL;type=pref:http://preston159.com
+END:VCARD
