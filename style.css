@@ -1,86 +1,13 @@
+
+body,html {
+height: 100%;
+  margin: 0;
+
+}
+
 body{
-        background-color: black;
-        color: white;
-            ;
-    font-family: monospace;
-    margin: 1em 0px 1em;
-        }
-        a{
-            color: white
-        }
-        span#nav {
-            text-align: center;
-        }
-        .logo {
-            width: 290px;
-            margin: auto;
-        }
-        .logo a {
-            color: white;
-            text-decoration: none;
-
-        }
-        .ver {
-            position: absolute;
-            bottom: 0px;
-        }
-        .cool {
-                         color:#313131;
-      -webkit-animation:colorchange 20s infinite alternate;
-        }
-
-    @-webkit-keyframes colorchange {
-      0% {
-        
-        color: blue;
-      }
-      
-      10% {
-        
-        color: #8e44ad;
-      }
-      
-      20% {
-        
-        color: #1abc9c;
-      }
-      
-      30% {
-        
-        color: #d35400;
-      }
-      
-      40% {
-        
-        color: blue;
-      }
-      
-      50% {
-        
-        color: #34495e;
-      }
-      
-      60% {
-        
-        color: blue;
-      }
-      
-      70% {
-        
-        color: #2980b9;
-      }
-      80% {
-     
-        color: #f1c40f;
-      }
-      
-      90% {
-     
-        color: #2980b9;
-      }
-      
-      100% {
-        
-        color: pink;
-      }
-    }
+  background-image: url("untitled%20(1).svg");
+  background-position: center center;
+  background-size: 200px;
+  background-repeat: no-repeat;
+}
