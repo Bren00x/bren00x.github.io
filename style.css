@@ -1,13 +1,45 @@
-
-body,html {
-height: 100%;
-  margin: 0;
-
-}
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,300i,400,400i,500,500i,600,700,800,900');
 
 body{
-  background-image: url("untitled%20(1).svg");
-  background-position: center center;
-  background-size: 200px;
-  background-repeat: no-repeat;
+  font-family: Montserrat,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  -moz-font-feature-settings:"kern" 1; 
+  -ms-font-feature-settings:"kern" 1; 
+  -o-font-feature-settings:"kern" 1; 
+  -webkit-font-feature-settings:"kern" 1; 
+  font-feature-settings:"kern" 1;
+  font-kerning: normal;
+  font-family: Montserrat,sans-serif;
+}
+h1{
+  font-weight: 600
+}
+
+.navbar-toggler{
+  border: none;
+  border-color: none;
+}
+
+.navbar-nav,.nav-item{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.container{
+  max-width: 40em;
+}
+
+li{
+  color: black
+}
+
+div.date{
+  color:#bcbcbc;
+  font-size: 12px
 }
