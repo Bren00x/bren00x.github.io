@@ -85,7 +85,8 @@
       
       
       function push(last,buy,sell,ud,time){
-        if(ud=0){
+          console.log(ud);
+        if(ud==0){
           $("section").prepend('<div class="list"><span>'+time+'</span> - <span class="ion-arrow-down-c">'+last+'</span> | Buy: <span class="list-high">'+buy+'</span> Sell: <span class="list-low">'+sell+'</span></div>');
           
           $(".value").removeClass("ion-arrow-up-c").addClass("ion-arrow-down-c");
