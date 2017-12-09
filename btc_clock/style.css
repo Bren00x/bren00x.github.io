@@ -1,0 +1,62 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600');
+
+body {
+  background-color: white;
+  font-family: 'Overpass Mono', monospace;
+
+  margin: 0;
+  color: #fff;
+  background-color: #000
+}
+
+h1 {
+  text-align: center;
+}
+
+
+nav,.list{
+  padding: 5px;
+}
+
+.card{
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+.card-2{
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  
+}
+
+.high,.list-high{
+  margin-right: 10px;
+  color: #00b909;
+  background: rgba(0, 185, 9, 0.2)
+}
+.low,.list-low,.ion-arrow-down-c{
+  color: #c60606;
+  background: rgba(198, 6, 6, .2)
+
+}
+
+.ion-arrow-up-c{
+  color: #00b909;
+  background: rgba(0, 185, 9, 0.2)
+}
+.list{
+  font-size: 10px;
+}
+
+nav span.logo{
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}

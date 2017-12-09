@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BTC Clock - Bren.</title>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>BTC Clock <a href="https://bren00x.github.io"><span class="logo" style="background-image:url(logo_black.svg);" width="30px"></span></a></nav>
+    <br>
+    <br>
+    <br>
+    <div class="card">
+      <h1 id="price"><span class="value"><span class="num">...$</span></span></h1>
+      
+      <nav>Buy: <span class="high">...$</span> <div>Sell: <span class="low">...$</span></div><div class="list">Refreshes every minute.</div></nav>
+    </div>
+
+    <div class="card-2">
+    <nav></nav>
+      <section></section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+ 
+    <script>
+      
+      var pre;
+      var pretwo;
+      update(pre);
+      setInterval(function() {
+                  update(pre);
+                  },60000);
+      function update(value){
+        //value = pretwo;
+        
+        console.log(pre);
+        //console.log(pretwo);
+        //console.log(value);
+        $.getJSON( "https://blockchain.info/ticker?" + Math.random(), function( data) {
+            d = new Date(),
+            h = (d.getHours()<10?'0':'') + d.getHours(),
+            m = (d.getMinutes()<10?'0':'') + d.getMinutes();
+          
+          var arr = Object.values(data);
+
+          
+        
+          
+          if(pre<arr[0].last){
+          
+            //console.log("<");
+            
+            push(arr[0].last+"$",arr[0].buy+"$",arr[0].sell+"$",1,h+':'+m);
+            
+          } else if(pre>arr[0].last){
+          
+            
+            push(arr[0].last+"$",arr[0].buy+"$",arr[0].sell+"$",0,h+':'+m)
+            
+            //console.log(">")
+          } else {
+            push(arr[0].last+"$",arr[0].buy+"$",arr[0].sell+"$",2,h+':'+m)
+            
+            console.log("Error or Price Hasn't Changed");
+          }
+          
+          /*else {
+            $("value").removeClass("ion-arrow-up-c ion-arrow-down-c").addClass("ion-minus-round");
+          }*/
+        pre = arr[0].last;
+        
+        
+        
+            
+        
+          //push(arr[0].last+"$",arr[0].buy+"$",arr[0].sell+"$",,h+':'+m)
+          
+          //addData(myChart, h + ':' + m, arr[0].last);
+        
+      });
+      }
+      
+      
+      function push(last,buy,sell,ud,time){
+        if(ud=0){
+          $("section").prepend('<div class="list"><span>'+time+'</span> - <span class="ion-arrow-down-c">'+last+'</span> | Buy: <span class="list-high">'+buy+'</span> Sell: <span class="list-low">'+sell+'</span></div>');
+          
+          $(".value").removeClass("ion-arrow-up-c").addClass("ion-arrow-down-c");
+          
+          
+        } else {
+          $("section").prepend('<div class="list"><span>'+time+'</span> - <span class="ion-arrow-up-c">'+last+'</span> | Buy: <span class="list-high">'+buy+'</span> Sell: <span class="list-low">'+sell+'</span></div>');
+          
+          
+          $(".value").removeClass("ion-arrow-down-c").addClass("ion-arrow-up-c");
+          
+          
+        }
+        
+        
+        $(".num").text(last);
+        $(".high").text(buy);
+        $(".low").text(sell);
+        
+        
+        
+      }
+
+    </script>
+  </body>
+</html>
