@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>auth</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="progress" style="height: 2px;">
+      <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="progress"></div>
+    </div>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <center><h3>Your Code</h3></center>
+      <div class="code"></div>
+      
+    </div>
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      var today = new Date();
+      var date = moment.utc(today).format('l LT');
+      var length = 60;
+      var x = document.getElementsByClassName("code");
+      var seconds = 60-today.getSeconds();
+      var time = today.getSeconds();
+      setInterval(function(){
+        var today = new Date();
+        var time = today.getSeconds()
+        if(time == 0){
+          x[0].innerHTML ="";
+          GenerateApplicationNo();          
+        }
+        
+        
+        //console.log(Math.round((time/60)*100));
+        document.getElementById('progress').style.width = Math.round((time/60)*100)+'%';
+
+      },100);
+      
+      GenerateApplicationNo();
+      function GenerateApplicationNo() {
+        var dt = new Date();
+        var seed = dt.getYear() + dt.getDay() + dt.getMonth() + dt.getHours() + dt.getMinutes();
+        var holdrand = ((seed * 214013 + 2531011) >> 16) & 0x7fff; 
+        var holdrand2 = ((holdrand * 214013 + 2531011) >> 16) & 0x7fff; 
+        
+
+        var str = holdrand + holdrand2;
+        str = str.toString();
+        for (var i = 0, len = str.length; i < len; i++) {
+          x[0].innerHTML += "<div>"+str.charAt(i)+"</div>";
+        }
+      }
+      
+    </script>
+  </body>
+</html>

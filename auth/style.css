@@ -1,0 +1,14 @@
+.code div{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  padding: 8px 5px;
+  text-align: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+.code{
+  text-align: center;
+}
