@@ -1,0 +1,18 @@
+<title>$$$$$$$#$</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<center>
+    <h1>BS TAX</h1>
+    <input id="date" type="date" style="font-size: 20px;"><br>
+    <button onclick="run()" style="font-size: 20px;">Go</button>
+    <p>Agerithum stolen from the dotards over at <a href="https://axthepinktax.com/">Ax the Pink Tax</a></p>
+</center>
+<script>
+    function run() {
+        var date = document.querySelector("#date").value;
+        t = 1351 / 365;
+        r = new Date, s = new Date(date), l = Math.abs(r.getTime() - s.getTime()), c = Math.ceil(l / 864e5);
+        alert("$" + Math.floor(c * t))
+    }
+
+</script>
